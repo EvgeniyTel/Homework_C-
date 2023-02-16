@@ -24,13 +24,13 @@ Console.WriteLine($"Вторая цифра в числе {res}" );
 Console.WriteLine("Введите  число:");
 int number = Convert.ToInt32(Console.ReadLine());
 int result = -1;
-     if (number >= 100)
+      if (number >= 100)  //если число трехзначное
       {
-         while (number > 999)
+         while (number > 999) // если число четырехзначное
         {
-         number = number / 10;
+         number = number / 10;  // ведем до трех знаков
         }
-      result = number % 10;
+      result = number % 10;  //определяем цифру
       Console.WriteLine($"Третья цифра {result}");
       }
       else
