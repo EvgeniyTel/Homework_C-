@@ -1,33 +1,34 @@
 ﻿Console.Clear();
-/*Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+
+/*Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
 Напишите программу, которая покажет количество чётных чисел в массиве.
 
-[345, 897, 568, 234] -> 2*/
+[345, 897, 568, 234] -> 2
 
-int[] array = FillArray(7, 100, 500);
+int[] array = FillArray(7, 101, 501);
 
-Console.WriteLine($"В массиве: [{string.Join(" ",array)}]");
+Console.WriteLine($"В массиве: [{string.Join(" ", array)}]");
 Console.WriteLine($"Количество четных чисел = {GetEvenValueInArray(array)}");
 
 int[] FillArray(int size, int min, int max)
 {
-    int[] array = new int[size];
+    int[] result = new int[size];
     Random rnd = new Random();
-    for (int i = 0; i  < array.Length; i++)
+    for (int i = 0; i < result.Length; i++)
     {
-     array[i] = rnd.Next(min, max + 1);
+        result[i] = rnd.Next(min, max + 1);
     }
-    return array ;
-     
+    return result;
 }
 int[] GetEvenValueInArray(int[] array)
 {
-    int count = 0;
+    
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 == 1)
-            count++;
+        int rezult = 0;
+        if (array[i] % 2 == 0)
+            rezult++;
     }
-    return count ;
-}
+    return rezult;
+}*/
 
