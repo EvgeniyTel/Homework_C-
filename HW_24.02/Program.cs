@@ -69,4 +69,46 @@ int[] GetSumUnfairPositionArray(int[] array)
     return sum;
 }*/
 
+/*Задача 38: Задайте массив вещественных чисел.
+Найдите разницу между максимальным и минимальным элементов массива.
 
+[3 7 22 2 78] -> 76*/
+
+int[] array = FillArray(4, 1, 200);
+
+Console.WriteLine($"В массиве: [{string.Join(" ", array)}]");
+Console.WriteLine($"Разница между максимальным и минимальным элементов массива = {GetDifferenceMinMaxArray(array)}"
+);
+
+int[] FillArray(int size, int min, int max)
+{
+    int[] result = new int[size];
+    Random rnd = new Random();
+    for (int i = 0; i < result.Length; i++)
+    {
+        result[i] = rnd.Next(min, max + 1);
+    }
+    return result;
+}
+int[] GetDifferenceMinMaxArray(int[] array)
+{
+    int sum = 0;
+    int max = array[0];
+    int min = array[1];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > array[i + 1])
+        {
+            array[i] = max;
+            array[i + 1] = min;
+        }
+        else
+        {
+           array[i] = min;
+            array[i + 1] = max; 
+        }
+        sum = max - min;
+    }
+    return sum;
+}
