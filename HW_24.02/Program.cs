@@ -4,32 +4,30 @@
 
 [345, 897, 568, 234] -> 2*/
 
-int[] array = FillArray(4, 100, 500);
+int[] array = FillArray(7, 100, 500);
 
 Console.WriteLine($"В массиве: [{string.Join(" ",array)}]");
-Console.WriteLine(
-    $"Количество четных чисел = [{string.Join(" ", GetEvenValueInArray(array))}]"
-);
+Console.WriteLine($"Количество четных чисел = {GetEvenValueInArray(array)}");
 
 int[] FillArray(int size, int min, int max)
 {
-    int[] result = new int[size];
+    int[] array = new int[size];
     Random rnd = new Random();
-    for (int i = 0; i  < result.Length; i++)
+    for (int i = 0; i  < array.Length; i++)
     {
-        result[i] = rnd.Next(min, max + 1);
+     array[i] = rnd.Next(min, max + 1);
     }
-    return rezult;
+    return array ;
      
 }
 int[] GetEvenValueInArray(int[] array)
 {
-     int rezult = 0;
- for (int i = 0; i < array.Length; i++)
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
     {
- if (array  % 2 == 1)
- rezult++;
+        if (array[i] % 2 == 1)
+            count++;
     }
- return rezult;
+    return count ;
 }
 
