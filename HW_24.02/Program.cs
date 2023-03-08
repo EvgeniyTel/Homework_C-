@@ -92,12 +92,13 @@ int[] FillArray(int size, int min, int max)
 }
 int[] GetDifferenceMinMaxArray(int[] array)
 {
-    int sum = 0;
+    
     int max = array[0];
     int min = array[1];
 
     for (int i = 0; i < array.Length; i++)
     {
+    int sum = 0;   
         if (array[i] > array[i + 1])
         {
             array[i] = max;
