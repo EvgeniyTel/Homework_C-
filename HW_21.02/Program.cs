@@ -6,7 +6,7 @@
 
 2, 4 -> 16*/
 
-Console.Write("Введите число А:");
+/*Console.Write("Введите число А:");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B:");
 int b = Convert.ToInt32(Console.ReadLine());
@@ -20,7 +20,7 @@ int GetPowByNumber(int limit)
         result *= a;
     }
     return result;
-}
+}*/
 
 /*Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
@@ -29,7 +29,7 @@ int GetPowByNumber(int limit)
 82 -> 10
 
 9012 -> 12*/
-Console.Write("Введите число: ");
+/*Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
 int sum = 0;
 int GetSumNumbToValue(int value)
@@ -42,7 +42,7 @@ int GetSumNumbToValue(int value)
     }
     return sum;
 }
-Console.WriteLine($"В числе {num} сумма цифр = {GetSumNumbToValue(sum)}");
+Console.WriteLine($"В числе {num} сумма цифр = {GetSumNumbToValue(sum)}");*/
 
 /*Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
